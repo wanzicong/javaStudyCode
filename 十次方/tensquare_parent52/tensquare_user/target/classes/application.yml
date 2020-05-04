@@ -1,0 +1,24 @@
+server: 
+  port: 9008
+spring: 
+  application:  
+    name: tensquare-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.139.167:3306/tensquare_user?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 192.168.139.167
+  rabbitmq:
+    host: 192.168.139.167
+#阿里云通信自定义属性
+#aliyun:
+#  sms:
+#    accessKeyId: 不告诉你
+#    accessKeySecret: 不告诉你
+#    template_code: SMS_67590099
+#    sign_name: 波波老师

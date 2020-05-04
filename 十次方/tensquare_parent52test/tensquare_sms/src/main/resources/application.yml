@@ -1,0 +1,14 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-sms #指定服务名
+  rabbitmq:
+    host: 192.168.139.167
+
+aliyun:
+  sms:
+    accessKeyId: LTAI7I6N7MEf1jL2 # AccessKey ID (用户AccessKey)
+    accessKeySecret: WGSg3QKFAhMxPxAzsIf55trVcDP4Lo #Access Key Secret (用户AccessKey)
+    template_code: SMS_163432310  #模版CODE: SMS_163432310
+    sign_name: 自己做短信测试 #签名名称

@@ -1,0 +1,30 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: tensquare-friend
+
+ #数据源配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.139.167:3306/tensquare_friend?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  #JPA的整合配置
+  jpa:
+    database: mysql
+    show-sql: true
+
+#  用户登录
+jwt:
+  config:
+    key: itcast
+#注册服务
+eureka:
+  client:
+    #Eureka服务的地址
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #用于表示在猜测主机名时，服务器的IP地址应该与操作系统报告的主机名相对应。(注册服务和客户端如果在一台机器上则无需配置)
+    prefer-ip-address: true

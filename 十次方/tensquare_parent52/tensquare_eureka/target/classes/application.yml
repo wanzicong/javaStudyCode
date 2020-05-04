@@ -1,0 +1,16 @@
+server:
+  #服务端口
+  port: 8761
+eureka:
+  instance:
+    #注册中心服务的主机，默认是localhost
+    hostname: localhost
+  client:
+    #是否将当前微服务注册到Eureka服务中。自己是注册中心，因此无需注册。
+    register-with-eureka: false
+    #是否从Eureka中获取注册信息。自己是注册中心，因此无需获取。
+    fetch-registry: false
+    #Eureka客户端与与Eureka服务端进行交互的地址Map表
+    service-url:
+      #默认http://localhost:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

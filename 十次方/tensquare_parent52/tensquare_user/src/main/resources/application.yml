@@ -1,0 +1,41 @@
+server: 
+  port: 9008
+spring: 
+  application:  
+    name: tensquare-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.139.167:3306/tensquare_user?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 192.168.139.167
+  rabbitmq:
+    host: 192.168.139.167
+
+#自定义属性jwt相关
+jwt:
+  config:
+    key: itcast
+    #一个小时过期
+    ttl: 3600000
+
+eureka:
+  client:
+    #Eureka服务的地址
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #用于表示在猜测主机名时，服务器的IP地址应该与操作系统报告的主机名相对应。(注册服务和客户端如果在一台机器上则无需配置)
+    prefer-ip-address: true
+
+#阿里云通信自定义属性
+#aliyun:
+#  sms:
+#    accessKeyId: 不告诉你
+#    accessKeySecret: 不告诉你
+#    template_code: SMS_67590099
+#    sign_name: 波波老师
